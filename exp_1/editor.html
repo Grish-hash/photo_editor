@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photo Editing </title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #navigation {
+            padding: 15px;
+        }
+
+        #navigation h1{
+            margin-top: 0;
+        }
+        #content {
+            background-image: url("backgr.jpg");
+            height:500px;
+            background-size: cover;
+            background-position:  center;
+            background-repeat: no-repeat;
+            padding: 35px;
+            background-color: blue;
+
+        }
+        #content h2 {
+            margin-top: 0;
+        }
+
+        #services {
+            padding: 20px;
+        }
+
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px 20px;
+            border: 1px solid black;
+        }
+
+        #user-form{
+            padding: 20px;
+        }
+        fieldset {
+            padding: 15px;
+        }
+
+        /* Media Section */
+        #media {
+            padding: 20px;
+        }
+
+        #media h2 {
+            border-bottom: 1px solid black;
+            padding-bottom: 10px;
+        }
+
+        audio {
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="main_container">
+
+    <div id="navigation">
+
+        <h1>PhotoEditor</h1>
+
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Design</a>
+        <a href="#">Business</a>
+
+    </div>
+
+    <div id="content">
+
+        <h2>Create your own perfect picture</h2>
+        <p>
+            Experience all the different and unique photo
+            editing services with the tools we provide you need to enhance
+            your photo to the best way possible.
+        </p>
+
+        <a href="photo_edit.html">Back to Home</a>
+
+    </div>
+
+     <div id="services">
+
+         <h2>Editing service</h2>
+         <table>
+             <tr>
+                 <th>Service</th>
+                 <th>Description</th>
+                 <th>Price</th>
+             </tr>
+
+             <tr>
+                 <td>Filter</td>
+                 <td>Enhance your pic</td>
+                 <td>2$</td>
+             </tr>
+
+             <tr>
+                 <td>Crop</td>
+                 <td>Adjust ratios</td>
+                 <td>1.5$</td>
+             </tr>
+
+             <tr>
+                 <td>Saturation</td>
+                 <td>Adjust color</td>
+                 <td>1.2$</td>
+             </tr>
+
+
+         </table>
+
+     </div>
+
+      <div id="user-form">
+          <h2>Photo editing user detail form</h2>
+
+          <form>
+              <fieldset>
+                  <legend>Customer Details</legend>
+
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name">
+
+                  <br><br>
+
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email">
+              </fieldset>
+
+              <br>
+
+              <label for="editing">Choose Editing Service:</label>
+
+              <select id="editing" name="editing">
+                  <option>Filter</option>
+                  <option>Crop</option>
+                  <option>Background Removal</option>
+                  <option>Retouching</option>
+              </select>
+
+              <br><br>
+
+              <label for="progress">Editing Progress:</label>
+
+              <progress id="progress" value="60" max="100">
+                  60%
+              </progress>
+
+              <br><br>
+
+              <input type="submit" value="Submit Request">
+
+          </form>
+
+      </div>
+
+
+    <div id="media">
+
+        <h2>Learn Photo Editing</h2>
+
+        <h3>Audio Guide</h3>
+
+        <audio controls>
+            <source src="audio.mp3" type=audio/mpeg">
+        </audio>
+
+        <h3>Video Tutorial</h3>
+
+        <video width="600" controls>
+            <source src="sample_vid.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+
+
+
+</div>
+
+</body>
+</html>
