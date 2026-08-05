@@ -1,0 +1,151 @@
+body{
+
+    margin:0;
+    font-family:Arial, sans-serif;
+    background-color:#eef6ff;
+
+}
+
+
+/* Header */
+
+.header{
+
+    background:#4a90e2;
+    color:white;
+    padding:15px;
+
+}
+
+.header h1{
+
+    margin:0;
+
+}
+
+
+/* Navigation */
+
+.navbar{
+
+    list-style:none;
+    margin:10px 0 0 0;
+    padding:0;
+
+}
+
+.navbar li{
+
+    display:inline-block;
+    position:relative;
+
+}
+
+.navbar li a{
+
+    color:white;
+    text-decoration:none;
+    padding:10px 20px;
+    display:block;
+
+}
+
+.navbar li a:hover{
+
+    background:#357abd;
+
+}
+
+
+/* Dropdown */
+
+.dropdown-content{
+
+    display:none;
+    position:absolute;
+    background:white;
+    min-width:150px;
+
+}
+
+.dropdown-content a{
+
+    color:black;
+    display:block;
+
+}
+
+.dropdown:hover .dropdown-content{
+
+    display:block;
+
+}
+
+
+/* Forms */
+
+.container{
+
+    margin:50px;
+    text-align:center;
+
+}
+
+.box{
+
+    display:inline-block;
+
+    width:300px;
+
+    background:white;
+
+    padding:20px;
+
+    margin:20px;
+
+    border-radius:10px;
+
+}
+
+.box h2{
+
+    color:#4a90e2;
+
+}
+
+input[type=text],
+input[type=email],
+input[type=password]{
+
+    width:90%;
+    padding:8px;
+
+}
+
+input[type=submit]{
+
+    background:#4a90e2;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 20px;
+
+    cursor:pointer;
+
+}
+
+input[type=submit]:hover{
+
+    background:#357abd;
+
+}
+
+.footer{
+    background-color:#3b82f6;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
