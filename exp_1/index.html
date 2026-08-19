@@ -8,7 +8,7 @@
 <body>
 <div class="header">
 
-    <h1>📸 PhotoEditor</h1>
+    <h1 id="pagetitle">📸 PhotoEditor</h1>
 
     <ul class="navbar">
 
@@ -41,17 +41,24 @@
 
         <h2>Sign In</h2>
 
-        <form>
+        <form id = "loginForm">
 
             <label>Username / Email</label><br>
-            <input type="text"><br><br>
+            <input type="text" id="loginUsername"><br><br>
 
             <label>Password</label><br>
-            <input type="password"><br><br>
+            <input type="password" id="loginPassword">
+            <br><br>
+
+            <button type="button" id="showLoginPassword">
+                Show Password
+            </button>
 
             <input type="submit" value="Login">
 
         </form>
+
+        <p id="loginMessage"></p>
 
     </div>
 
@@ -62,20 +69,29 @@
 
         <h2>Sign Up</h2>
 
-        <form>
+        <form id="signupForm">
 
             <label>Name</label><br>
-            <input type="text"><br><br>
+            <input type="text" id="signupName">
+            <br><br>
 
             <label>Email</label><br>
-            <input type="email"><br><br>
+            <input type="email"  id="signupEmail">
+            <br><br>
 
             <label>Password</label><br>
-            <input type="password"><br><br>
+            <input type="password" id="signupPassword">
+            <br><br>
+
+            <button type="button" id="showSignupPassword">
+                Show Password
+            </button>
 
             <input type="submit" value="Register">
 
         </form>
+
+        <p id="signupMessage"></p>
 
     </div>
 
@@ -85,6 +101,7 @@
 
 </div>
 
+<script src="script.js"></script>
 
 </body>
 </html>
