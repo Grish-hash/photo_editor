@@ -94,3 +94,33 @@ pageTitle.addEventListener("click", function() {
     pageTitle.textContent = "📸 Welcome to PhotoEditor!";
 
 });
+
+//Animation
+
+// Timing Events
+
+window.setTimeout(function() {
+    document.getElementById("timingMessage").textContent =
+        "Welcome to PhotoEditor! Start editing your photos.";
+}, 3000);
+
+let progressValue = 0;
+let editingTimer;
+
+function startEditing() {
+    editingTimer = window.setInterval(function() {
+
+        if (progressValue < 100) {
+            progressValue += 10;
+
+            document.getElementById("progress").value = progressValue;
+            document.getElementById("progressText").textContent =
+                progressValue + "%";
+        }
+
+    }, 1000);
+}
+
+function stopEditing() {
+    window.clearInterval(editingTimer);
+}
