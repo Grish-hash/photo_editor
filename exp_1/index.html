@@ -1,128 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>PhotoEditor Login</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhotoEditor | Account</title><link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="header">
-
-    <h1 id="pagetitle">📸 PhotoEditor</h1>
-
-    <ul class="navbar">
-
-        <li class="dropdown">
-
-            <a href="#">Home</a>
-
-            <div class="dropdown-content">
-                <a href="#">Services</a>
-                <a href="#">Gallery</a>
-                <a href="#">Pricing</a>
-            </div>
-
-        </li>
-
-        <li><a href="#">About</a></li>
-        <li><a href="#">Model</a></li>
-        <li><a href="#">Others</a></li>
-
-    </ul>
-
-</div>
-
-
-<div class="container">
-
-    <!-- Sign In -->
-
-    <div class="box">
-
-        <h2>Sign In</h2>
-
-        <form id = "loginForm">
-
-            <label>Username / Email</label><br>
-            <input type="text" id="loginUsername"><br><br>
-
-            <label>Password</label><br>
-            <input type="password" id="loginPassword">
-            <br><br>
-
-            <button type="button" id="showLoginPassword">
-                Show Password
-            </button>
-
-            <input type="submit" value="Login">
-
-        </form>
-
-        <p id="loginMessage"></p>
-
-    </div>
-
-
-    <!-- Sign Up -->
-
-    <div class="box">
-
-        <h2>Sign Up</h2>
-
-        <form id="signupForm">
-
-            <label>Name</label><br>
-            <input type="text" id="signupName">
-            <br><br>
-
-            <label>Email</label><br>
-            <input type="email"  id="signupEmail">
-            <br><br>
-
-            <label>Password</label><br>
-            <input type="password" id="signupPassword">
-            <br><br>
-
-            <button type="button" id="showSignupPassword">
-                Show Password
-            </button>
-
-            <input type="submit" value="Register">
-
-        </form>
-
-        <p id="signupMessage"></p>
-
-    </div>
-
-    <!-- Timing Events Section -->
-    <div class="timing-section">
-
-        <h2>Photo Editing Progress</h2>
-
-        <p id="timingMessage"></p>
-
-        <label>Editing Progress:</label>
-        <progress id="progress" value="0" max="100"></progress>
-
-        <p id="progressText">0%</p>
-
-        <button onclick="startEditing()">Start Editing</button>
-        <button onclick="stopEditing()">Stop Editing</button>
-
-    </div>
-
-
-
-    <div class="footer">
-        <p>© 2026 PhotoEditor | All Rights Reserved</p>
-    </div>
-
-</div>
-
-
-
+<header class="site-header"><div class="nav-wrap">
+  <a class="brand" href="home.html">📸 PhotoEditor</a>
+  <nav class="nav-links" aria-label="Main navigation"><a href="home.html">Home</a><a href="editor.html">Editor</a><a href="photo_edit.html">Cost Calculator</a><a class="active nav-cta" href="index.html">Login / Sign Up</a></nav>
+</div></header>
+<main>
+  <section class="page-intro"><span class="eyebrow">Welcome back</span><h1>Your creative space awaits.</h1><p>Sign in or create a demo account to continue to the PhotoEditor workspace.</p></section>
+  <section class="two-column">
+    <article class="card form-card">
+      <h2>Sign In</h2><p class="muted">Already have an account? Enter any username and password for this front-end demo.</p>
+      <form id="loginForm">
+        <div class="form-group"><label for="loginUsername">Username or email</label><input type="text" id="loginUsername" autocomplete="username" required></div>
+        <div class="form-group"><label for="loginPassword">Password</label><div class="inline-password"><input type="password" id="loginPassword" autocomplete="current-password" required><button type="button" id="showLoginPassword" class="btn-secondary">Show</button></div></div>
+        <button type="submit">Login</button><p id="loginMessage" class="message" aria-live="polite"></p>
+      </form>
+    </article>
+    <article class="card form-card">
+      <h2>Create Account</h2><p class="muted">Register for the demo interface. No account data is saved to a server.</p>
+      <form id="signupForm">
+        <div class="form-group"><label for="signupName">Name</label><input type="text" id="signupName" autocomplete="name" required></div>
+        <div class="form-group"><label for="signupEmail">Email</label><input type="email" id="signupEmail" autocomplete="email" required></div>
+        <div class="form-group"><label for="signupPassword">Password</label><div class="inline-password"><input type="password" id="signupPassword" autocomplete="new-password" required minlength="4"><button type="button" id="showSignupPassword" class="btn-secondary">Show</button></div></div>
+        <button type="submit">Register</button><p id="signupMessage" class="message" aria-live="polite"></p>
+      </form>
+    </article>
+  </section>
+  <section class="card" style="margin-top:22px"><h2>Next step</h2><p class="muted">After the demo form responds, continue to the workspace to choose an editing service and try the progress controls.</p><a class="btn" href="editor.html">Continue to Editor →</a></section>
+</main>
+<footer class="site-footer"><p>© 2026 PhotoEditor · A Web Technology lab project</p></footer>
 <script src="script.js"></script>
-
-</body>
-</html>
+</body></html>

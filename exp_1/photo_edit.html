@@ -1,45 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>PhotoEditor</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhotoEditor | Cost Calculator</title><link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-<div id="main_container">
-
-    <div id="navigation">
-        <h1>PhotoEditor</h1>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Design</a>
-        <a href="#">Business</a>
-    </div>
-
-    <div id="main_content">
-        <h2>Welcome to Photo Editor</h2>
-        <p>
-            Here at Photo Editor we provide exclusive options and suggestions to further
-            enhance your photos with our styling methods and upload, edit and share instantly from
-            one place.
-
-        </p>
-        <button>
-            upload your photo
-        </button>
-
-    </div>
-
-    <div id="styling options">
-        <h2>Styling Options</h2>
-        <button>filter</button>
-        <button>crop</button>
-        <button>draw</button>
-        <button>edit</button>
-    </div>
-
-
-</div>
-
-</body>
-</html>
+<header class="site-header"><div class="nav-wrap"><a class="brand" href="home.html">📸 PhotoEditor</a><nav class="nav-links" aria-label="Main navigation"><a href="home.html">Home</a><a href="editor.html">Editor</a><a class="active" href="photo_edit.html">Cost Calculator</a><a class="nav-cta" href="index.html">Login / Sign Up</a></nav></div></header>
+<main>
+  <section class="page-intro"><span class="eyebrow">jQuery lab experiment</span><h1>Photo Editing Cost Calculator</h1><p>Choose your editing service and photo count to get an instant sample estimate using jQuery.</p></section>
+  <section class="two-column">
+    <article class="card">
+      <h2>Customize your package</h2>
+      <form id="costForm">
+        <div class="form-group"><label for="editingService">Editing service</label><select id="editingService"><option value="filter">Creative filters — $2.00/photo</option><option value="crop">Crop & resize — $1.50/photo</option><option value="saturation">Colour adjustment — $1.20/photo</option><option value="retouch">Photo retouching — $5.00/photo</option><option value="background">Background removal — $7.50/photo</option></select></div>
+        <div class="form-group"><label for="quality">Editing quality</label><select id="quality"><option value="standard">Standard — included</option><option value="premium">Premium — extra $1.00/photo</option></select></div>
+        <div class="form-group"><label for="photoCount">Number of photos</label><input type="number" id="photoCount" min="1" max="1000" step="1" placeholder="e.g. 5" required></div>
+        <button type="button" id="calculateCost">Calculate Estimate</button>
+      </form>
+      <div id="costResult" class="result-box" aria-live="polite">Your estimate will appear here.</div>
+      <p class="note">Sample prices for the lab demonstration only. This page does not take payments.</p>
+    </article>
+    <aside class="card">
+      <h2>Price guide</h2>
+      <table class="service-table"><thead><tr><th>Service</th><th>Price / photo</th></tr></thead><tbody><tr><td>Creative filters</td><td>$2.00</td></tr><tr><td>Crop & resize</td><td>$1.50</td></tr><tr><td>Colour adjustment</td><td>$1.20</td></tr><tr><td>Retouching</td><td>$5.00</td></tr><tr><td>Background removal</td><td>$7.50</td></tr></tbody></table>
+      <div class="result-box" style="margin-top:20px"><strong>jQuery methods used</strong><p style="margin:8px 0 0;font-weight:400"> <code>$(document).ready()</code>, <code>.click()</code>, <code>.val()</code>, <code>.text()</code>, and <code>.css()</code>.</p></div>
+    </aside>
+  </section>
+</main>
+<footer class="site-footer"><p>© 2026 PhotoEditor · A Web Technology lab project</p></footer>
+<script src="jquery.js"></script>
+</body></html>

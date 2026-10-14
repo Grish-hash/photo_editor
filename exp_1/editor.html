@@ -1,199 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Photo Editing </title>
-    <style>
-        body {
-            margin: 0;
-        }
-
-        #navigation {
-            padding: 15px;
-        }
-
-        #navigation h1{
-            margin-top: 0;
-        }
-        #content {
-            background-image: url("backgr.jpg");
-            height:500px;
-            background-size: cover;
-            background-position:  center;
-            background-repeat: no-repeat;
-            padding: 35px;
-            background-color: blue;
-
-        }
-        #content h2 {
-            margin-top: 0;
-        }
-
-        #services {
-            padding: 20px;
-        }
-
-
-        table {
-            margin: 0 auto;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 10px 20px;
-            border: 1px solid black;
-        }
-
-        #user-form{
-            padding: 20px;
-        }
-        fieldset {
-            padding: 15px;
-        }
-
-        /* Media Section */
-        #media {
-            padding: 20px;
-        }
-
-        #media h2 {
-            border-bottom: 1px solid black;
-            padding-bottom: 10px;
-        }
-
-        audio {
-            margin-bottom: 20px;
-        }
-
-    </style>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhotoEditor | Editing Workspace</title><link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="main_container">
-
-    <div id="navigation">
-
-        <h1>PhotoEditor</h1>
-
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Design</a>
-        <a href="#">Business</a>
-
-    </div>
-
-    <div id="content">
-
-        <h2>Create your own perfect picture</h2>
-        <p>
-            Experience all the different and unique photo
-            editing services with the tools we provide you need to enhance
-            your photo to the best way possible.
-        </p>
-
-        <a href="photo_edit.html">Back to Home</a>
-
-    </div>
-
-     <div id="services">
-
-         <h2>Editing service</h2>
-         <table>
-             <tr>
-                 <th>Service</th>
-                 <th>Description</th>
-                 <th>Price</th>
-             </tr>
-
-             <tr>
-                 <td>Filter</td>
-                 <td>Enhance your pic</td>
-                 <td>2$</td>
-             </tr>
-
-             <tr>
-                 <td>Crop</td>
-                 <td>Adjust ratios</td>
-                 <td>1.5$</td>
-             </tr>
-
-             <tr>
-                 <td>Saturation</td>
-                 <td>Adjust color</td>
-                 <td>1.2$</td>
-             </tr>
-
-
-         </table>
-
-     </div>
-
-      <div id="user-form">
-          <h2>Photo editing user detail form</h2>
-
-          <form>
-              <fieldset>
-                  <legend>Customer Details</legend>
-
-                  <label for="name">Name:</label>
-                  <input type="text" id="name" name="name">
-
-                  <br><br>
-
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" name="email">
-              </fieldset>
-
-              <br>
-
-              <label for="editing">Choose Editing Service:</label>
-
-              <select id="editing" name="editing">
-                  <option>Filter</option>
-                  <option>Crop</option>
-                  <option>Background Removal</option>
-                  <option>Retouching</option>
-              </select>
-
-              <br><br>
-
-              <label for="progress">Editing Progress:</label>
-
-              <progress id="progress" value="60" max="100">
-                  60%
-              </progress>
-
-              <br><br>
-
-              <input type="submit" value="Submit Request">
-
-          </form>
-
-      </div>
-
-
-    <div id="media">
-
-        <h2>Learn Photo Editing</h2>
-
-        <h3>Audio Guide</h3>
-
-        <audio controls>
-            <source src="audio.mp3" type=audio/mpeg">
-        </audio>
-
-        <h3>Video Tutorial</h3>
-
-        <video width="600" controls>
-            <source src="sample_vid.mp4" type="video/mp4">
-        </video>
-
-    </div>
-
-
-
-
-</div>
-
-</body>
-</html>
+<header class="site-header"><div class="nav-wrap"><a class="brand" href="home.html">📸 PhotoEditor</a><nav class="nav-links" aria-label="Main navigation"><a href="home.html">Home</a><a class="active" href="editor.html">Editor</a><a href="photo_edit.html">Cost Calculator</a><a class="nav-cta" href="index.html">Login / Sign Up</a></nav></div></header>
+<main>
+  <section class="page-intro"><span class="eyebrow">Editing workspace</span><h1>Plan your next photo edit.</h1><p>Choose a service, enter your details, and use the demo progress tracker.</p></section>
+  <section class="two-column">
+    <article class="card">
+      <h2>Editing services</h2>
+      <table class="service-table"><thead><tr><th>Service</th><th>What it does</th><th>From</th></tr></thead><tbody>
+        <tr><td>Filter</td><td>Enhance colour and mood</td><td>$2.00</td></tr><tr><td>Crop</td><td>Adjust framing and ratio</td><td>$1.50</td></tr><tr><td>Saturation</td><td>Adjust colour intensity</td><td>$1.20</td></tr><tr><td>Retouching</td><td>Polish image details</td><td>$5.00</td></tr>
+      </tbody></table>
+      <div class="form-group" style="margin-top:20px"><label for="photoUpload">Choose a photo (optional demo preview)</label><div class="upload-box"><input type="file" id="photoUpload" accept="image/*"><img id="photoPreview" class="preview-image" alt="Selected photo preview"><p class="note">The image preview stays in your browser; it is not uploaded to a server.</p></div></div>
+    </article>
+    <article class="card">
+      <h2>Submit an editing request</h2>
+      <form id="editingForm">
+        <div class="form-group"><label for="customerName">Name</label><input id="customerName" name="name" required></div>
+        <div class="form-group"><label for="customerEmail">Email</label><input type="email" id="customerEmail" name="email" required></div>
+        <div class="form-group"><label for="editingService">Editing service</label><select id="editingService"><option>Filter</option><option>Crop</option><option>Saturation</option><option>Background Removal</option><option>Retouching</option></select></div>
+        <button type="submit">Submit Demo Request</button><p id="editingMessage" class="message" aria-live="polite"></p>
+      </form>
+      <div class="timing-card"><h3>Photo editing progress</h3><p class="muted">This is a demonstration of JavaScript timing events.</p><div class="progress-line"><progress class="progress-track" id="progress" value="0" max="100"></progress><strong id="progressText">0%</strong></div><div class="actions"><button type="button" id="startEditing">Start Progress</button><button type="button" id="stopEditing" class="btn-secondary">Stop</button><button type="button" id="resetEditing" class="btn-secondary">Reset</button></div><p id="timingMessage" class="note" aria-live="polite">Ready to begin.</p></div>
+    </article>
+  </section>
+  <section class="card" style="margin-top:22px"><h2>Learn photo editing</h2><p class="muted">You can add your existing audio and video tutorial files here if they are available in your project folder.</p><p class="note">Supported files from your original project were referenced as <code>audio.mp3</code> and <code>sample_vid.mp4</code>. Add them to this folder to use them.</p><details><summary>Show tutorial media controls</summary><h3>Audio guide</h3><audio controls style="width:100%"><source src="audio.mp3" type="audio/mpeg">Your browser does not support audio.</audio><h3>Video tutorial</h3><video controls style="width:100%;max-width:600px"><source src="sample_vid.mp4" type="video/mp4">Your browser does not support video.</video></details></section>
+</main>
+<footer class="site-footer"><p>© 2026 PhotoEditor · A Web Technology lab project</p></footer>
+<script src="script.js"></script>
+</body></html>
